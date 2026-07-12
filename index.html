@@ -1,22 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gauri's Website</title>
+    <title>Gauri | Portfolio</title>
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-color: #2D3748;
+            --accent-color: #D69E2E;
+            --bg-color: #F7FAFC;
+            --text-color: #4A5568;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, #F7FAFC 0%, #E2E8F0 100%);
+            min-height: 60vh;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #B7791F;
+            transform: translateY(-2px);
+        }
+
+        /* Featured Section */
+        .features {
+            padding: 5rem 5%;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--primary-color);
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>
-        Welcome!
-    </h1>
-    <li>
-        <ul><a href="about.html">About me</a> </ul>
-        <ul><a href="index.html">Home</a> </ul>
-        <ul><a href="index.html">Home</a> </ul>
-    </li>
 
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">Gauri.</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Hi, I'm Gauri</h1>
+        <p>A creative professional passionate about turning great ideas into reality. Welcome to my digital space.</p>
+        <a href="#contact" class="btn">Let's Connect</a>
+    </section>
+
+    <!-- Features / Work Section -->
+    <section id="work" class="features">
+        <h2>What I Do</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Creative Strategy</h3>
+                <p>Developing unique approaches to solve complex problems and bring visions to life.</p>
+            </div>
+            <div class="card">
+                <h3>Project Execution</h3>
+                <p>Delivering high-quality results on time, with meticulous attention to detail.</p>
+            </div>
+            <div class="card">
+                <h3>Consulting</h3>
+                <p>Providing expert advice and insights to help you achieve your goals.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2026 Gauri. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Get in touch: hello@gauri.example.com</p>
+    </footer>
 
 </body>
-</html>
 
+</html>
